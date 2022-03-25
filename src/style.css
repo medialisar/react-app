@@ -36,6 +36,7 @@
   
   .list-detail {
     float: left;
+    margin-left: 10px;
   }
   
   .song-title {
