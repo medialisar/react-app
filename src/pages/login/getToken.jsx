@@ -1,4 +1,4 @@
-function getQueryParams(string) {
+function getToken(string) {
     const queries = string.substring(1).split('&');
     const finalObj = {};
     queries.forEach(query=>{
@@ -9,4 +9,4 @@ function getQueryParams(string) {
     return finalObj;
 }
 
-export default getQueryParams
+export default getToken
