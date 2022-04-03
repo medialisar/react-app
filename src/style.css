@@ -29,6 +29,14 @@
     padding: 10px;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
   }
+
+  .modal-title-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   .list-img {
     float: left;
@@ -46,6 +54,17 @@
   
   .song-artist {
     font-weight: 800;
+    font-size: 1rem;
+  }
+
+  .playlist-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  
+  .playlist-count {
+    margin-top: 2rem;
+    font-weight: 400;
     font-size: 1rem;
   }
   
