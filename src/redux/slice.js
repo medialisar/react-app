@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const inputSlice = createSlice({
-  name: "spotify",
+  name: 'spotify',
   initialState: {
     accessToken: null,
   },
