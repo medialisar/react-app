@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import Songs from "../../components/song";
 import formatParameter from "../../utils/formatParameter";
 import ModalCreatePlaylist from "./modal-create-playlist";
+import {TextField, Button} from '@mui/material';
 
 const Home = () => {
   const accToken = useSelector((state) => state.spotify.accessToken);
@@ -50,14 +51,13 @@ const Home = () => {
           </div>
         )}
         <form onSubmit={Search} className="my-4 flex gap-3">
-          <input
+          <TextField 
+            id="outlined-basic" 
+            label="Search Song" 
+            variant="outlined" 
             onChange={(e) => setKeyword(e.target.value)}
-            className="w-full border px-2 py-3"
-            type="text"
           />
-          <button className="bg-indigo-800 hover:bg-indigo-900 px-4 py-2 text-white rounded">
-            Search
-          </button>
+          <Button variant="contained">Search</Button>
         </form>
         <button
           disabled={SelectedTracks.length < 1}
