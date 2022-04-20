@@ -51,11 +51,17 @@ const Home = () => {
           </div>
         )}
         <form onSubmit={Search} className="my-4 flex gap-3">
+<<<<<<< HEAD
           {/* <input
+=======
+          <TextField 
+            id="outlined-basic" 
+            label="Search Song" 
+            variant="outlined" 
+>>>>>>> 41957fba62f42d3459dc530ebce92ffaf46b1449
             onChange={(e) => setKeyword(e.target.value)}
-            className="w-full border px-2 py-3"
-            type="text"
           />
+<<<<<<< HEAD
           <button className="bg-indigo-800 hover:bg-indigo-900 px-4 py-2 text-white rounded">
             Search
           </button> */}
@@ -65,6 +71,8 @@ const Home = () => {
             variant="outlined" 
             onChange={(e) => setKeyword(e.target.value)}
           />
+=======
+>>>>>>> 41957fba62f42d3459dc530ebce92ffaf46b1449
           <Button variant="contained">Search</Button>
         </form>
         <button
