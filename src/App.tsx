@@ -11,22 +11,35 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
+import UserOnlyRoute from './components/routes/UserOnlyRoute';
+import GuestOnlyRoute from './components/routes/GuestOnlyRoute';
+import Error404 from './pages/404';
+
+type paramType = {
+  [key: string]: string;
+};
+
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const { access_token = null } = getQueryParams(window.location.hash);
+    const { access_token = null } = getQueryParams(window.location.hash) as paramType;
     if (access_token) dispatch(updateAccessToken(access_token));
   }, [dispatch]);
 
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/create-playlist" component={HomePage}></Route>
-          <Route path="/" component={LoginPage}></Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <UserOnlyRoute path="/create-playlist">
+          <HomePage />
+        </UserOnlyRoute>
+        <GuestOnlyRoute exact path="/">
+          <LoginPage />
+        </GuestOnlyRoute>
+        <Route path="*">
+          <Error404 />
+        </Route>
+      </Switch>
     </div>
   );
 };

@@ -20,6 +20,7 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-param-reassign": 0,
-        "prefer-destructuring": ["error", {"object": true, "array": false}]
+        "prefer-destructuring": ["error", {"object": true, "array": false}],
+        "linebreak-style": ["error", "windows"]
     }
 }
